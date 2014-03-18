@@ -29,6 +29,8 @@ Requires: rubygem(table_print)
 Requires: rubygem(highline)
 Requires: rubygem(fastercsv)
 Requires: rubygem(mime-types) < 2.0.0
+Requires: rubygem(fast_gettext)
+Requires: rubygem(locale) <= 2.0.9
 %if 0%{?fedora}
 BuildRequires: rubygems-devel
 %endif
