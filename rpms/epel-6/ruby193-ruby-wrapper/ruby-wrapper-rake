@@ -1,6 +1,11 @@
 #!/bin/bash
 
 COMMAND="rake $@"
+SCL=FIXMESCL
 
-scl enable FIXMESCL "$COMMAND"
+if [ $SCL=ruby193 ] && scl -l | grep -qw ^v8314$; then
+SCL="ruby193 v8314"
+fi
+
+scl enable $SCL "$COMMAND"
 
